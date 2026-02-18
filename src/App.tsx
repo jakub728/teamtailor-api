@@ -15,7 +15,6 @@ function App() {
           include: "job-applications",
         },
       });
-
       return response.data.data;
     },
   });
@@ -28,26 +27,33 @@ function App() {
     queryKey: ["applications"],
     queryFn: async () => {
       const response = await api.get("/job-applications");
-
       return response.data.data;
     },
   });
 
   let candidatesUpdatedData =
     candidatesData?.map((c: any) => {
+      const appId = c.relationships["job-applications"]?.data?.[0]?.id || "";
+
+      const isApplication = appId
+        ? applicationsData.find((a: any) => a.id === appId)
+        : null;
+
       return {
         id: c.id,
         firstName: c.attributes["first-name"],
         lastName: c.attributes["last-name"],
         email: c.attributes["email"],
-        applicationId: c.relationships["job-applications"]?.data?.[0]?.id || "",
-        applicationCreatedAt: "",
+        applicationId: appId,
+        applicationCreatedAt: isApplication
+          ? isApplication.attributes["created-at"]
+          : "",
       };
     }) || [];
 
   console.log("Candidates data:", candidatesData);
-  console.log("Updated  data:", candidatesUpdatedData);
   console.log("Job application:", applicationsData);
+  console.log("Updated data:", candidatesUpdatedData);
 
   if (isLoadingCandidates || isLoadingApplications) return "Loading data...";
   if (errorCandidates || errorApplications) return "Error fetching data";
