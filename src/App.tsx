@@ -10,23 +10,47 @@ function App() {
   } = useQuery({
     queryKey: ["candidates"],
     queryFn: async () => {
-      const response = await api.get("/candidates");
-      return response.data;
+      const response = await api.get("/candidates", {
+        params: {
+          include: "job-applications",
+        },
+      });
+
+      return response.data.data;
     },
   });
 
-  const candidatesIds = candidatesData?.data.map((c: any) => c.id) || [];
-  const candidatesFirstNames =
-    candidatesData?.data.map((c: any) => c.attributes["first-name"]) || [];
-  const candidatesLastNames =
-    candidatesData?.data.map((c: any) => c.attributes["last-name"]) || [];
-  const candidatesEmails =
-    candidatesData?.data.map((c: any) => c.attributes["email"]) || [];
+  const {
+    data: applicationsData,
+    isLoading: isLoadingApplications,
+    error: errorApplications,
+  } = useQuery({
+    queryKey: ["applications"],
+    queryFn: async () => {
+      const response = await api.get("/job-applications");
 
-  console.log(candidatesIds);
+      return response.data.data;
+    },
+  });
 
-  if (isLoadingCandidates) return "Loading data...";
-  if (errorCandidates) return "Error fetching data";
+  let candidatesUpdatedData =
+    candidatesData?.map((c: any) => {
+      return {
+        id: c.id,
+        firstName: c.attributes["first-name"],
+        lastName: c.attributes["last-name"],
+        email: c.attributes["email"],
+        applicationId: c.relationships["job-applications"]?.data?.[0]?.id || "",
+        applicationCreatedAt: "",
+      };
+    }) || [];
+
+  console.log("Candidates data:", candidatesData);
+  console.log("Updated  data:", candidatesUpdatedData);
+  console.log("Job application:", applicationsData);
+
+  if (isLoadingCandidates || isLoadingApplications) return "Loading data...";
+  if (errorCandidates || errorApplications) return "Error fetching data";
 
   return (
     <div>
