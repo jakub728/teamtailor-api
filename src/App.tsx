@@ -2,7 +2,7 @@ import "./App.css";
 import { useQuery } from "@tanstack/react-query";
 import { api } from "./../client";
 
-interface TeamtailorCandidate {
+interface Candidate {
   id: string;
   attributes: {
     "first-name": string;
@@ -18,6 +18,9 @@ interface TeamtailorCandidate {
 
 interface JobApplication {
   id: string;
+  attributes: {
+    "created-at": string;
+  };
 }
 
 function App() {
@@ -50,12 +53,13 @@ function App() {
   });
 
   const candidatesUpdatedData =
-    candidatesData?.map((c: TeamtailorCandidate) => {
+    candidatesData?.map((c: Candidate) => {
       const appId = c.relationships["job-applications"]?.data?.[0]?.id || "";
 
-      const isApplication = appId
-        ? applicationsData.find((a: JobApplication) => a.id === appId)
-        : null;
+      const isApplication =
+        appId && applicationsData
+          ? applicationsData.find((a: JobApplication) => a.id === appId)
+          : null;
 
       return {
         candidate_id: c.id,
