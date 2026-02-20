@@ -1,0 +1,72 @@
+[
+  {
+    "candidate_id": "25235329",
+    "first_name": "Lill",
+    "last_name": "Friman",
+    "email": "lill_friman_12_sandbox_teamtailor_developer@example.com",
+    "job_application_id": "29305118"
+  },
+  {
+    "candidate_id": "25235330",
+    "first_name": "Hugo",
+    "last_name": "Cederlund",
+    "email": "hugo_cederlund_13_sandbox_teamtailor_developer@example.com",
+    "job_application_id": "29305121"
+  },
+  {
+    "candidate_id": "25235331",
+    "first_name": "Fritiof ",
+    "last_name": "Rahm",
+    "email": "fritiof_rahm_14_sandbox_teamtailor_developer@example.com",
+    "job_application_id": "29305122"
+  },
+  {
+    "candidate_id": "25235332",
+    "first_name": "Hildegard ",
+    "last_name": "Lorenzon",
+    "email": "hildegard_lorenzon_15_sandbox_teamtailor_developer@example.com",
+    "job_application_id": "29305123"
+  },
+  {
+    "candidate_id": "25235333",
+    "first_name": "Görel ",
+    "last_name": "Engström",
+    "email": "gorel_engstrom_16_sandbox_teamtailor_developer@example.com",
+    "job_application_id": "29305124"
+  },
+  {
+    "candidate_id": "25235334",
+    "first_name": "Ganizani  ",
+    "last_name": "Church",
+    "email": "ganizani_church_17_sandbox_teamtailor_developer@example.com",
+    "job_application_id": "29305125"
+  },
+  {
+    "candidate_id": "25235335",
+    "first_name": "Kersti ",
+    "last_name": "Sjöström",
+    "email": "kersti_sjostrom_18_sandbox_teamtailor_developer@example.com",
+    "job_application_id": "29305126"
+  },
+  {
+    "candidate_id": "25235336",
+    "first_name": "Odd ",
+    "last_name": "Molander",
+    "email": "odd_molander_19_sandbox_teamtailor_developer@example.com",
+    "job_application_id": "29305127"
+  },
+  {
+    "candidate_id": "25235337",
+    "first_name": "Christoffer",
+    "last_name": "Ankarstrand",
+    "email": "christoffer_ankarstrand_20_sandbox_teamtailor_developer@example.com",
+    "job_application_id": "29305128"
+  },
+  {
+    "candidate_id": "25235338",
+    "first_name": "Nanna",
+    "last_name": "Blomberg",
+    "email": "nanna_blomberg_21_sandbox_teamtailor_developer@example.com",
+    "job_application_id": "29305129"
+  }
+]
