@@ -4,6 +4,7 @@ import dotenv from "dotenv";
 import { ZodError } from "zod";
 import type { Request, Response, NextFunction } from "express";
 import userRouter from "./routes/userRouter.js";
+import jobsRouter from "./routes/jobsRouter.js";
 
 dotenv.config();
 
@@ -22,7 +23,7 @@ app.get("/", async (req: Request, res: Response, next: NextFunction) => {
 });
 
 app.use("/api/users", userRouter);
-// app.use("/api/jobs", jobsRouter);
+app.use("/api/jobs", jobsRouter);
 
 //!GLOBAL ERROR
 app.use((err: any, req: Request, res: Response, next: NextFunction) => {
