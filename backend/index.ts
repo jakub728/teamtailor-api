@@ -3,6 +3,7 @@ import cors from "cors";
 import dotenv from "dotenv";
 import { ZodError } from "zod";
 import type { Request, Response, NextFunction } from "express";
+import userRouter from "./routes/userRouter.js";
 
 dotenv.config();
 
@@ -12,11 +13,16 @@ const app = express();
 app.use(express.json());
 app.use(cors());
 
+app.get("/", async (req: Request, res: Response, next: NextFunction) => {
+  try {
+    res.status(200).send("Server is running");
+  } catch (error) {
+    next(error);
+  }
+});
 
-
-// app.use("/api/auth", AuthRoute);
-
-
+app.use("/api/users", userRouter);
+// app.use("/api/jobs", jobsRouter);
 
 //!GLOBAL ERROR
 app.use((err: any, req: Request, res: Response, next: NextFunction) => {

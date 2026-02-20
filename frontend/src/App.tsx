@@ -73,9 +73,6 @@ function App() {
       };
     }) || [];
 
-  // console.log("Candidates data:", candidatesData);
-  // console.log("Job application:", applicationsData);
-  // console.log("Updated candidates [{}]:", candidatesUpdatedData);
 
   const uploadCSV = (array: any[]) => {
     const headers = Object.keys(array[0]).join(",");
