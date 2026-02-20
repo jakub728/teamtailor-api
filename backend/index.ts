@@ -1,10 +1,8 @@
 import express from "express";
 import cors from "cors";
 import dotenv from "dotenv";
-import { ZodError } from "zod";
 import type { Request, Response, NextFunction } from "express";
 import userRouter from "./routes/userRouter.js";
-import jobsRouter from "./routes/jobsRouter.js";
 
 dotenv.config();
 
@@ -12,7 +10,13 @@ const PORT = process.env.PORT || 7777;
 const app = express();
 
 app.use(express.json());
-app.use(cors());
+
+const corsOptions = {
+  origin: "http://localhost:5173",
+  methods: ["GET", "POST", "PUT", "DELETE", "PATCH"],
+  credentials: true,
+};
+app.use(cors(corsOptions));
 
 app.get("/", async (req: Request, res: Response, next: NextFunction) => {
   try {
@@ -23,7 +27,6 @@ app.get("/", async (req: Request, res: Response, next: NextFunction) => {
 });
 
 app.use("/api/users", userRouter);
-app.use("/api/jobs", jobsRouter);
 
 //!GLOBAL ERROR
 app.use((err: any, req: Request, res: Response, next: NextFunction) => {
