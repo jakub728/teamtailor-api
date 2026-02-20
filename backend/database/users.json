@@ -4,69 +4,79 @@
     "first_name": "Lill",
     "last_name": "Friman",
     "email": "lill_friman_12_sandbox_teamtailor_developer@example.com",
-    "job_application_id": "29305118"
+    "job_application_id": "29305118",
+    "job_application_created_at": "2022-03-22T15:59:12.658+01:00"
   },
   {
     "candidate_id": "25235330",
     "first_name": "Hugo",
     "last_name": "Cederlund",
     "email": "hugo_cederlund_13_sandbox_teamtailor_developer@example.com",
-    "job_application_id": "29305121"
+    "job_application_id": "29305121",
+    "job_application_created_at": "2022-03-22T15:59:12.753+01:00"
   },
   {
     "candidate_id": "25235331",
     "first_name": "Fritiof ",
     "last_name": "Rahm",
     "email": "fritiof_rahm_14_sandbox_teamtailor_developer@example.com",
-    "job_application_id": "29305122"
+    "job_application_id": "29305122",
+    "job_application_created_at": "2022-03-22T15:59:12.799+01:00"
   },
   {
     "candidate_id": "25235332",
     "first_name": "Hildegard ",
     "last_name": "Lorenzon",
     "email": "hildegard_lorenzon_15_sandbox_teamtailor_developer@example.com",
-    "job_application_id": "29305123"
+    "job_application_id": "29305123",
+    "job_application_created_at": "2022-03-22T15:59:12.847+01:00"
   },
   {
     "candidate_id": "25235333",
     "first_name": "Görel ",
     "last_name": "Engström",
     "email": "gorel_engstrom_16_sandbox_teamtailor_developer@example.com",
-    "job_application_id": "29305124"
+    "job_application_id": "29305124",
+    "job_application_created_at": "2022-03-22T15:59:12.890+01:00"
   },
   {
     "candidate_id": "25235334",
     "first_name": "Ganizani  ",
     "last_name": "Church",
     "email": "ganizani_church_17_sandbox_teamtailor_developer@example.com",
-    "job_application_id": "29305125"
+    "job_application_id": "29305125",
+    "job_application_created_at": "2022-03-22T15:59:12.934+01:00"
   },
   {
     "candidate_id": "25235335",
     "first_name": "Kersti ",
     "last_name": "Sjöström",
     "email": "kersti_sjostrom_18_sandbox_teamtailor_developer@example.com",
-    "job_application_id": "29305126"
+    "job_application_id": "29305126",
+    "job_application_created_at": "2022-03-22T15:59:13.000+01:00"
   },
   {
     "candidate_id": "25235336",
     "first_name": "Odd ",
     "last_name": "Molander",
     "email": "odd_molander_19_sandbox_teamtailor_developer@example.com",
-    "job_application_id": "29305127"
+    "job_application_id": "29305127",
+    "job_application_created_at": "2022-03-22T15:59:13.038+01:00"
   },
   {
     "candidate_id": "25235337",
     "first_name": "Christoffer",
     "last_name": "Ankarstrand",
     "email": "christoffer_ankarstrand_20_sandbox_teamtailor_developer@example.com",
-    "job_application_id": "29305128"
+    "job_application_id": "29305128",
+    "job_application_created_at": "2022-03-22T15:59:13.073+01:00"
   },
   {
     "candidate_id": "25235338",
     "first_name": "Nanna",
     "last_name": "Blomberg",
     "email": "nanna_blomberg_21_sandbox_teamtailor_developer@example.com",
-    "job_application_id": "29305129"
+    "job_application_id": "29305129",
+    "job_application_created_at": "2022-03-22T15:59:13.114+01:00"
   }
 ]
